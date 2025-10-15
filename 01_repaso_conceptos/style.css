@@ -1,0 +1,47 @@
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#focas {
+    width: 350px;
+    height: 350px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#blanco_y_negro {
+    background-color: rgb(121, 143, 163);
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+}
+
+#desenfocar {
+    background-color: rgb(121, 143, 163);
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+}
+
+#zoom_y_rotar {
+    background-color: rgb(121, 143, 163);
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+}
+
+button:hover {
+    color: blueviolet;
+    background-color: rgb(211, 183, 238);
+    scale: 1.1;
+}
+
+#boton{
+    display: flex;
+    gap: 10px;
+}
+
