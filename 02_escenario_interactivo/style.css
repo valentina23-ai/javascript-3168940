@@ -1,61 +1,122 @@
+ body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c2f2ff;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Comic Sans MS', sans-serif;
 
-body {
-  text-align: center;
-  background: #0b1020;
-  color: white;
-  font-family: sans-serif;
 }
+
 
 .escenario {
+  position: relative;
   width: 750px;
   height: 500px;
-  margin: 20px auto;
-  position: relative;
+  background-image: url("bosque.jpg");
+  background-size: cover;
+  border: 4px solid #7b68ee;
   overflow: hidden;
-  border: 4px solid #9b59b6;
-  border-radius: 12px;
+  border-radius: 15px;
 }
 
-.fondo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.panel {
   position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  text-shadow: 1px 1px 3px black;
 }
 
-.mariposa, .brillo, .seta, .cofre, .libro, .flor {
+.personaje {
   position: absolute;
-  width: 80px;
+  width: 90px;
+  height: 100px;
+  top: 200px;
+  left: 200px;
+  transition: top 0.1s, left 0.1s;
+}
+
+.flor, .seta, .animable {
+  position: absolute;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
 }
 
+.flor { filter: drop-shadow(0 0 5px rgb(163, 64, 255)); }
+.seta { filter: drop-shadow(0 0 5px rgb(70, 68, 207)); }
 
-.mariposa { top: 50px; left: 100px; }
-.brillo { top: 60px; right: 100px; }
-.seta { bottom: 40px; left: 80px; }
-.cofre { bottom: 40px; right: 100px; }
-.libro { top: 220px; left: 300px; }
-.flor { bottom: 100px; right: 300px; }
+.libro { width: 60px; height: 60px;   position: absolute;  }
+.estrella { width: 60px; height: 60px;   position: absolute;}
 
-
-@keyframes volar {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
-  100% { transform: translateY(0); }
-}
-
-@keyframes parpadeo {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 1; }
-}
-
-.animar.mariposa { animation: volar 3s infinite; }
-.animar.brillo { animation: parpadeo 2s infinite; }
-
-#texto {
+.barra-magica {
   position: absolute;
-  bottom: 10px;
+  bottom: 0;
   width: 100%;
-  color: #ffd;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.6);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-top: 2px solid #7b68ee;
+  backdrop-filter: blur(3px);
 }
 
+.boton-magia {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  transition: transform 0.3s, filter 0.3s;
+  border-radius: 50%;
+}
+
+.boton-magia:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 10px #fff);
+}
+
+
+.mensaje-magico {
+  display: none;
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid #7b68ee;
+  border-radius: 10px;
+  padding: 15px 20px;
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+  width: 70%;
+  box-shadow: 0 0 15px #fff;
+  animation: aparecer 0.5s ease;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateX(-50%) translateY(20px); }
+  to { opacity: 1; transform: translateX(-50%) translateY(0); }
+} 
+.saltar{
+  animation: salto 0.6s ease forwards;
+}
+@keyframes salto {
+  0% { transform: translateY(0);opacity: 1;}
+  30% { transform: translateY(-60px); }
+  100% { transform: translateY(0);opacity: 0;}
+}
+
+.moverEstrella{
+  animation: moverEstrella 2s linear infinite alternate;
+}
+@keyframes moverEstrella {
+  0% { transform: translateY(0) ; }
+  100% { transform: translateY(-40px) ; }
+}
