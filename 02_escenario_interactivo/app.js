@@ -120,17 +120,6 @@ animables.forEach(el => {
 });
 
 
-flores.forEach(flores => {
-
-    flores.addEventListener("click", ()=> {
-    item.style.filter = "grayscale(1)";
-    flores.classList.add("saltar");
-    counter++;
-    escenario.textContent = counter
-});
-
-})
-
 botonesMagia.forEach(boton => {
   boton.addEventListener('click', () => {
     const frase = boton.getAttribute('data-frase');

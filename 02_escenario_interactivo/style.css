@@ -104,19 +104,49 @@
   from { opacity: 0; transform: translateX(-50%) translateY(20px); }
   to { opacity: 1; transform: translateX(-50%) translateY(0); }
 } 
-.saltar{
-  animation: salto 0.6s ease forwards;
-}
-@keyframes salto {
-  0% { transform: translateY(0);opacity: 1;}
-  30% { transform: translateY(-60px); }
-  100% { transform: translateY(0);opacity: 0;}
+
+
+.escenario1{
+  position: relative;
+  width: 750px;
+  height: 500px;
+  background-image: url("PAISAJE.jpg");
+  background-size: cover;
+  border: 4px solid #7b68ee;
+  overflow: hidden;
+  border-radius: 15px;
 }
 
-.moverEstrella{
-  animation: moverEstrella 2s linear infinite alternate;
+.panel1 {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  text-shadow: 1px 1px 3px black;
 }
-@keyframes moverEstrella {
-  0% { transform: translateY(0) ; }
-  100% { transform: translateY(-40px) ; }
+
+.personaje1{
+  position: absolute;
+  width: 90px;
+  height: 100px;
+  top: 200px;
+  left: 200px;
+  transition: top 0.1s, left 0.1s;
 }
+
+.peces, .cereza {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.peces { filter: drop-shadow(0 0 5px rgb(163, 64, 255)); }
+.cereza { filter: drop-shadow(0 0 5px rgb(70, 68, 207)); }
+
+.copo { width: 60px; height: 60px;   position: absolute;  }
+.muñeco { width: 60px; height: 60px;   position: absolute;}
