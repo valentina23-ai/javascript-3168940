@@ -1,134 +1,93 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Juego Interactivo de Flores y Setas</title>
+  <title>Juego Interactivo de Hadas</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
- 
- 
-  <div class="escenario">
-    <div class="panel">
-      <div class="vidas">❤️❤️❤️</div>
-      <div class="puntos">Puntos: 0</div>
-      
+  <div class="contenedor-juego">
+    <!-- Flechas de navegación -->
+    <button class="flecha flecha-izq">⬅</button>
+    <button class="flecha flecha-der">➡</button>
+
+    <!-- ESCENARIO 1 -->
+    <div class="escenario activo" data-escenario="1" style="background-image: url('bosque.jpg')">
+      <div class="panel">
+        <div class="vidas">❤️❤️❤️</div>
+        <div class="puntos">Puntos: 0</div>
+      </div>
+      <img src="hada.png" class="personaje" alt="Hada del Bosque">
+      <img src="rosa.png" class="atrapar" alt="Flor mágica">
+      <img src="rosa.png" class="atrapar" alt="Flor mágica">
+      <img src="rosa.png" class="atrapar" alt="Flor mágica">
+      <img src="rosa.png" class="atrapar" alt="Flor mágica">
+      <img src="rosa.png" class="atrapar" alt="Flor mágica">
+      <img src="rosa.png" class="atrapar" alt="Flor mágica">
+      <img src="rosa.png" class="atrapar" alt="Flor mágica">
+      <img src="rosa.png" class="atrapar" alt="Flor mágica">
+      <img src="setas.png" class="enemigo" alt="Seta venenosa">
+      <img src="setas.png" class="enemigo" alt="Seta venenosa">
+      <img src="setas.png" class="enemigo" alt="Seta venenosa">
+      <img src="setas.png" class="enemigo" alt="Seta venenosa">
+      <img src="libro.png" class="animable" alt="Libro encantado">
+      <img src="estrella.png" class="animable" alt="Estrella brillante">
     </div>
 
-    <!-- Personaje principal -->
-    <img src="hada.png" class="personaje" alt="Personaje">
-
-    <!-- 5 flores -->
-    <img src="rosa.png" class="flor " alt="Flor">
-    <img src="rosa.png" class="flor " alt="Flor">
-    <img src="rosa.png" class="flor " alt="Flor">
-    <img src="rosa.png" class="flor " alt="Flor">
-    <img src="rosa.png" class="flor " alt="Flor">
-
-    <!-- 3 setas venenosas -->
-    <img src="setas.png" class="seta " alt="Seta venenosa">
-    <img src="setas.png" class="seta" alt="Seta venenosa">
-    <img src="setas.png" class="seta" alt="Seta venenosa">
-
-    <!-- Elementos animables -->
-    <img src="libro.png" class=" libro" alt="Libro">
-    <img src="estrella.png" class=" estrella moverEstrella" alt="Estrella">
-  </div>
-
-
-  <!-- Barra inferior -->
-<div class="barra-magica">
-  <img src="casita.png" class="boton-magia " data-frase="La casita de las hadas brilla con los sueños que tocan su puerta 🏡" alt="casita de hadas">
-  <img src="hoja.png" class="boton-magia " data-frase="Las hojas del árbol mágico susurran los secretos del bosque 🍃" alt="Hoja mágica">
-  <img src="luz.png" class="boton-magia " data-frase="Las luciérnagas iluminan el camino hacia los deseos escondidos 🪲" alt="Luciérnaga mágica">
-  <img src="luna.png" class="boton-magia " data-frase="La luna protege los sueños de las hadas bajo su luz plateada 🌙" alt="Luna brillante">
-</div>
-
-<!-- Ventana emergente -->
-<div class="mensaje-magico" id="mensajeMagico"></div>
-
-
-  <div class="escenario1">
-    <div class="panel1">
-      <div class="vidas1">❤️❤️❤️</div>
-      <div class="puntos1">Puntos: 0</div>
-      
+    <!-- ESCENARIO 2 -->
+    <div class="escenario" data-escenario="2" style="background-image: url('playa.jpg')">
+      <div class="panel">
+        <div class="vidas">❤️❤️❤️</div>
+        <div class="puntos">Puntos: 0</div>
+      </div>
+      <img src="sirena.png" class="personaje" alt="Sirena mágica">
+      <img src="perla.png" class="atrapar" alt="Perla mágica">
+      <img src="perla.png" class="atrapar" alt="Perla mágica">
+       <img src="perla.png" class="atrapar" alt="Perla mágica">
+      <img src="perla.png" class="atrapar" alt="Perla mágica">
+       <img src="perla.png" class="atrapar" alt="Perla mágica">
+      <img src="perla.png" class="atrapar" alt="Perla mágica">
+       <img src="perla.png" class="atrapar" alt="Perla mágica">
+      <img src="perla.png" class="atrapar" alt="Perla mágica">
+      <img src="caracol.png" class="enemigo" alt="Caracol venenoso">
+      <img src="caracol.png" class="enemigo" alt="Caracol venenoso">
+      <img src="caracol.png" class="enemigo" alt="Caracol venenoso">
+      <img src="caracol.png" class="enemigo" alt="Caracol venenoso">
+      <img src="cofre.png" class="animable" alt="Cofre dorado">
+      <img src="estrella1.png" class="animable" alt="Estrella de mar">
     </div>
 
-    <!-- Personaje principal -->
-    <img src="POLAR.png" class="personaje1" alt="Personaje">
-
-    <!-- 5 flores -->
-    <img src="PEZ.jpg" class="peces " alt="pez">
-    <img src="PEZ.jpg" class="peces " alt="pez">
-    <img src="PEZ.jpg" class="peces " alt="pez">
-    <img src="PEZ.jpg" class="peces " alt="pez">
-    <img src="PEZ.jpg" class="peces " alt="pez">
-
-    <!-- 3 setas venenosas -->
-    <img src="CEREZA.png" class="cereza " alt="cereza">
-    <img src="CEREZA.png" class="cereza " alt="cereza">
-    <img src="CEREZA.png" class="cereza " alt="cereza">
-
-    <!-- Elementos animables -->
-    <img src="copo.png" class=" copo" alt="copo">
-    <img src="muñe.png" class=" muñeco" alt="muñeco">
-  </div>
-
-
-  <!-- Barra inferior -->
-<div class="barra-magica">
-  <img src="casita.png" class="boton-magia " data-frase="La casita de las hadas brilla con los sueños que tocan su puerta 🏡" alt="casita de hadas">
-  <img src="hoja.png" class="boton-magia " data-frase="Las hojas del árbol mágico susurran los secretos del bosque 🍃" alt="Hoja mágica">
-  <img src="luz.png" class="boton-magia " data-frase="Las luciérnagas iluminan el camino hacia los deseos escondidos 🪲" alt="Luciérnaga mágica">
-  <img src="luna.png" class="boton-magia " data-frase="La luna protege los sueños de las hadas bajo su luz plateada 🌙" alt="Luna brillante">
-</div>
-
-<!-- Ventana emergente -->
-<div class="mensaje-magico" id="mensajeMagico"></div>
-
-
-  <div class="escenario">
-    <div class="panel">
-      <div class="vidas">❤️❤️❤️</div>
-      <div class="puntos">Puntos: 0</div>
-      
+    <!-- ESCENARIO 3 -->
+    <div class="escenario" data-escenario="3" style="background-image: url('cielo.jpg')">
+      <div class="panel">
+        <div class="vidas">❤️❤️❤️</div>
+        <div class="puntos">Puntos: 0</div>
+      </div>
+      <img src="angel.png" class="personaje" alt="Ángel del Cielo">
+      <img src="estrella2.png" class="atrapar" alt="Estrella dorada">
+      <img src="estrella2.png" class="atrapar" alt="Estrella dorada">
+      <img src="estrella2.png" class="atrapar" alt="Estrella dorada">
+      <img src="estrella2.png" class="atrapar" alt="Estrella dorada">
+      <img src="estrella2.png" class="atrapar" alt="Estrella dorada">
+      <img src="estrella2.png" class="atrapar" alt="Estrella dorada">
+      <img src="estrella2.png" class="atrapar" alt="Estrella dorada">
+      <img src="estrella2.png" class="atrapar" alt="Estrella dorada">
+      <img src="meteorito.png" class="enemigo" alt="Meteoro peligroso">
+       <img src="meteorito.png" class="enemigo" alt="Meteoro peligroso">
+        <img src="meteorito.png" class="enemigo" alt="Meteoro peligroso">
+          <img src="meteorito.png" class="enemigo" alt="Meteoro peligroso">
+        <img src="nube.png" class="animable" alt="Nube mágica">
+      <img src="estrella4.png" class="animable" alt="Lucero">
     </div>
 
-    <!-- Personaje principal -->
-    <img src="hada.png" class="personaje" alt="Personaje">
+    <!-- Barra mágica dinámica -->
+    <div class="barra-magica" id="barraMagica"></div>
 
-    <!-- 5 flores -->
-    <img src="rosa.png" class="flor " alt="Flor">
-    <img src="rosa.png" class="flor " alt="Flor">
-    <img src="rosa.png" class="flor " alt="Flor">
-    <img src="rosa.png" class="flor " alt="Flor">
-    <img src="rosa.png" class="flor " alt="Flor">
-
-    <!-- 3 setas venenosas -->
-    <img src="setas.png" class="seta " alt="Seta venenosa">
-    <img src="setas.png" class="seta" alt="Seta venenosa">
-    <img src="setas.png" class="seta" alt="Seta venenosa">
-
-    <!-- Elementos animables -->
-    <img src="libro.png" class=" libro" alt="Libro">
-    <img src="estrella.png" class=" estrella moverEstrella" alt="Estrella">
+    <!-- Mensaje emergente -->
+    <div class="mensaje-magico" id="mensajeMagico"></div>
   </div>
-
-
-  <!-- Barra inferior -->
-<div class="barra-magica">
-  <img src="casita.png" class="boton-magia " data-frase="La casita de las hadas brilla con los sueños que tocan su puerta 🏡" alt="casita de hadas">
-  <img src="hoja.png" class="boton-magia " data-frase="Las hojas del árbol mágico susurran los secretos del bosque 🍃" alt="Hoja mágica">
-  <img src="luz.png" class="boton-magia " data-frase="Las luciérnagas iluminan el camino hacia los deseos escondidos 🪲" alt="Luciérnaga mágica">
-  <img src="luna.png" class="boton-magia " data-frase="La luna protege los sueños de las hadas bajo su luz plateada 🌙" alt="Luna brillante">
-</div>
-
-<!-- Ventana emergente -->
-<div class="mensaje-magico" id="mensajeMagico"></div>
 
   <script src="app.js"></script>
 </body>

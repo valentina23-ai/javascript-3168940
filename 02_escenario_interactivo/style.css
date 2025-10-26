@@ -1,4 +1,4 @@
- body {
+body {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,19 +6,25 @@
   height: 100vh;
   margin: 0;
   font-family: 'Comic Sans MS', sans-serif;
-
 }
 
+.contenedor-juego {
+  position: relative;
+}
 
 .escenario {
   position: relative;
   width: 750px;
   height: 500px;
-  background-image: url("bosque.jpg");
   background-size: cover;
   border: 4px solid #7b68ee;
   overflow: hidden;
   border-radius: 15px;
+  display: none;
+}
+
+.escenario.activo {
+  display: block;
 }
 
 .panel {
@@ -42,22 +48,19 @@
   transition: top 0.1s, left 0.1s;
 }
 
-.flor, .seta, .animable {
+.atrapar, .enemigo, .animable {
   position: absolute;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   cursor: pointer;
 }
 
 .flor { filter: drop-shadow(0 0 5px rgb(163, 64, 255)); }
 .seta { filter: drop-shadow(0 0 5px rgb(70, 68, 207)); }
 
-.libro { width: 60px; height: 60px;   position: absolute;  }
-.estrella { width: 60px; height: 60px;   position: absolute;}
-
 .barra-magica {
   position: absolute;
-  bottom: 0;
+  bottom: -80px;
   width: 100%;
   height: 70px;
   background: rgba(255, 255, 255, 0.6);
@@ -66,6 +69,7 @@
   align-items: center;
   border-top: 2px solid #7b68ee;
   backdrop-filter: blur(3px);
+  border-radius: 0 0 15px 15px;
 }
 
 .boton-magia {
@@ -80,7 +84,6 @@
   transform: scale(1.2);
   filter: drop-shadow(0 0 10px #fff);
 }
-
 
 .mensaje-magico {
   display: none;
@@ -103,50 +106,26 @@
 @keyframes aparecer {
   from { opacity: 0; transform: translateX(-50%) translateY(20px); }
   to { opacity: 1; transform: translateX(-50%) translateY(0); }
-} 
-
-
-.escenario1{
-  position: relative;
-  width: 750px;
-  height: 500px;
-  background-image: url("PAISAJE.jpg");
-  background-size: cover;
-  border: 4px solid #7b68ee;
-  overflow: hidden;
-  border-radius: 15px;
 }
 
-.panel1 {
+.flecha {
   position: absolute;
-  top: 10px;
-  left: 10px;
-  color: #fff;
-  font-size: 20px;
-  display: flex;
-  justify-content: space-between;
-  width: 95%;
-  text-shadow: 1px 1px 3px black;
-}
-
-.personaje1{
-  position: absolute;
-  width: 90px;
-  height: 100px;
-  top: 200px;
-  left: 200px;
-  transition: top 0.1s, left 0.1s;
-}
-
-.peces, .cereza {
-  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  background: rgba(255,255,255,0.7);
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
   width: 50px;
   height: 50px;
-  cursor: pointer;
+  transition: 0.3s;
 }
 
-.peces { filter: drop-shadow(0 0 5px rgb(163, 64, 255)); }
-.cereza { filter: drop-shadow(0 0 5px rgb(70, 68, 207)); }
+.flecha:hover {
+  background: white;
+  transform: translateY(-50%) scale(1.1);
+}
 
-.copo { width: 60px; height: 60px;   position: absolute;  }
-.muñeco { width: 60px; height: 60px;   position: absolute;}
+.flecha-izq { left: -70px; }
+.flecha-der { right: -70px; }
