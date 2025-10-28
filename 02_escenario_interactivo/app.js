@@ -4,10 +4,13 @@ const flechaDer = document.querySelector('.flecha-der');
 const mensajeMagico = document.getElementById('mensajeMagico');
 const barraMagica = document.getElementById('barraMagica');
 
+
 let escenarioActual = 0;
 let x = 200, y = 200;
 let vidas = 3;
 let puntos = 0;
+
+
 
 // Frases únicas por escenario
 const frasesPorEscenario = [
