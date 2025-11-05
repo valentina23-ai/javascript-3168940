@@ -4,13 +4,10 @@ const flechaDer = document.querySelector('.flecha-der');
 const mensajeMagico = document.getElementById('mensajeMagico');
 const barraMagica = document.getElementById('barraMagica');
 
-
 let escenarioActual = 0;
 let x = 200, y = 200;
 let vidas = 3;
 let puntos = 0;
-
-
 
 // Frases únicas por escenario
 const frasesPorEscenario = [
@@ -34,6 +31,12 @@ const frasesPorEscenario = [
   ]
 ];
 
+const sonidosPorEscenario = [
+  ["casita.mp3", "hoja.mp3", "luz.mp3", "luna.mp3"],
+  ["concha.mp3", "perla.mp3", "estrella1.mp3", "cofre.mp3"],
+  ["estrella4.mp3", "estrella2.mp3", "nube.mp3", "luz2.mp3"]
+];
+
 function mostrarEscenario(index) {
   escenarios.forEach(e => e.classList.remove('activo'));
   escenarios[index].classList.add('activo');
@@ -42,27 +45,49 @@ function mostrarEscenario(index) {
 
 function actualizarBarraMagica(index) {
   barraMagica.innerHTML = "";
-  frasesPorEscenario[index].forEach(obj => {
+  frasesPorEscenario[index].forEach((obj, i) => {
     const img = document.createElement('img');
     img.src = obj.img;
     img.classList.add('boton-magia');
     img.setAttribute('data-frase', obj.texto);
+
+    // 🔊 Crear y asociar el audio correspondiente
+    const audio = document.createElement('audio');
+    audio.src = sonidosPorEscenario[index][i];
+    audio.classList.add('audio-magia');
+    img.appendChild(audio);
+
     barraMagica.appendChild(img);
   });
   activarBotonesMagia();
 }
-
 function activarBotonesMagia() {
   const botones = document.querySelectorAll('.boton-magia');
   botones.forEach(boton => {
+    const audio = boton.querySelector('audio');
+
     boton.addEventListener('click', () => {
       mensajeMagico.textContent = boton.getAttribute('data-frase');
       mensajeMagico.style.display = 'block';
       escenarios[escenarioActual].addEventListener('click', ocultarMensaje);
+
+      // 🔊 Si está pausado, reproducir. Si ya suena, pausarlo.
+      if (audio.paused) {
+        // Pausar otros sonidos que estén activos
+        document.querySelectorAll('.audio-magia').forEach(a => {
+          if (!a.paused) a.pause();
+        });
+
+        audio.currentTime = 0;
+        audio.play();
+        boton.style.opacity = "0.7"; // efecto visual activo
+      } else {
+        audio.pause();
+        boton.style.opacity = "1";
+      }
     });
   });
 }
-
 function ocultarMensaje(e) {
   if (!e.target.classList.contains('boton-magia')) {
     mensajeMagico.style.display = 'none';
