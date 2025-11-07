@@ -1,32 +1,100 @@
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>comic</title>
-    <link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PelisPlus - Home</title>
 </head>
 <body>
-    
-     
-    <header>
-        <div class="logo">Pelisplus2</div>
-        <nav class="nav">
-            <a href="#">Inicio</a>
-            <a href="#">Series</a>
-            <a href="#">Peliculas</a>
-            <a href="#">Proximos estrenos</a>
-            <a href="#">buscar</a>
-         <button>lupa</button>
 
-            
-        </nav>
-    </header>
+  <!-- Encabezado -->
+  <header>
+    <div class="logo">
+      <h1>PelisPlus</h1>
+    </div>
 
-    <section class="hero">
-        <h1>TITULO</h1>
-        <p>(descripcion)</p>
-        <button>Reproducir</button>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Películas</a></li>
+        <li><a href="#">Series</a></li>
+        <li><a href="#">Estrenos</a></li>
+        <li><a href="#">Géneros</a></li>
+      </ul>
+    </nav>
+
+    <form class="buscador">
+      <input type="search" placeholder="Buscar película o serie...">
+      <button type="submit" class="boton">Buscar</button>
+    </form>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+
+    <!-- Sección destacada / hero -->
+    <section class="destacada">
+      <h2>Destacadas de la semana</h2>
+      <article class="pelicula-destacada">
+        <img src="imagen-destacada.jpg" alt="Pelicula destacada">
+        <div class="info">
+          <h3>Título de la película</h3>
+          <p>Descripción breve de la película destacada.</p>
+          <a href="#">Ver ahora</a>
+        </div>
+      </article>
     </section>
 
+    <!-- Listado de últimas películas -->
+    <section class="ultimas">
 
-    <script src="app.js"></script>
+      <h2>Peliculas actualizadas recientes</h2>
+
+      <div class="grid-peliculas">
+        <article class="pelicula">
+          <img src="poster1.jpg" alt="Pelicula 1">
+          <h3>Pelicula 1</h3>
+          <p>Año • Duración</p>
+        </article>
+
+        <article class="pelicula">
+          <img src="poster2.jpg" alt="Pelicula 2">
+          <h3>Pelicula 2</h3>
+          <p>Año • Duración</p>
+        </article>
+
+        <article class="pelicula">
+          <img src="poster3.jpg" alt="Pelicula 3">
+          <h3>Pelicula 3</h3>
+          <p>Año • Duración</p>
+        </article>
+
+        <article class="pelicula">
+          <img src="poster4.jpg" alt="Pelicula 4">
+          <h3>Pelicula 4</h3>
+          <p>Año • Duración</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sección de top -->
+    <section class="top">
+      <h2>Top 5 del día</h2>
+      <ol>
+        <li>Pelicula A</li>
+        <li>Pelicula B</li>
+        <li>Pelicula C</li>
+        <li>Pelicula D</li>
+        <li>Pelicula E</li>
+      </ol>
+    </section>
+
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>© 2025 PelisPlus — Página de ejemplo sin estilos.</p>
+  </footer>
+
 </body>
 </html>
