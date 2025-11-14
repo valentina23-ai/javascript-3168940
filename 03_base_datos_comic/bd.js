@@ -1,5 +1,3 @@
-let comic ={
-
     
   "NombreComic": "Huellas de ritmo",
   "numeroCapitulos": 3,
