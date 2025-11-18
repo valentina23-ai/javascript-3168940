@@ -85,6 +85,7 @@ nav a:hover {
 
 /* ======== SECCIÓN DESTACADA ======== */
 .destacada {
+  position: relative;
   margin: 2rem 0;
   text-align: center;
 }
@@ -110,6 +111,7 @@ nav a:hover {
 
 .pelicula-destacada img {
   width: 50%;
+  height: auto;
   object-fit: cover;
 }
 
@@ -119,9 +121,41 @@ nav a:hover {
   width: 50%;
 }
 
-/* ======== GRID CAPÍTULOS ======== */
+.pelicula-destacada .info h3 {
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 0.8rem;
+}
+
+.pelicula-destacada .info p {
+  color: #bbb;
+  margin-bottom: 1.2rem;
+}
+
+.pelicula-destacada .info a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background: #ff3d3d;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.pelicula-destacada .info a:hover {
+  background: #ff5c5c;
+  transform: scale(1.05);
+}
+
+/* ======== ÚLTIMAS PELÍCULAS ======== */
 .ultimas {
   padding: 2rem;
+}
+
+.ultimas h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
 }
 
 .grid-peliculas {
@@ -135,7 +169,7 @@ nav a:hover {
   border-radius: 10px;
   overflow: hidden;
   text-align: center;
-  transition: 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
 
@@ -145,12 +179,45 @@ nav a:hover {
   object-fit: cover;
 }
 
-/* ======== PERSONAJES ======== */
+.pelicula h3 {
+  margin: 0.5rem 0;
+}
+
+.pelicula p {
+  color: #aaa;
+  margin-bottom: 0.8rem;
+}
+
+.pelicula:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(255, 61, 61, 0.3);
+}
+
+/* ======== TOP 5 ======== */
 .top {
   padding: 2rem;
   background: #1a1a1a;
   margin: 2rem;
   border-radius: 10px;
+}
+
+.top h2 {
+  margin-bottom: 1rem;
+}
+
+.top ol {
+  list-style: decimal inside;
+  color: #ccc;
+}
+
+.top li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #333;
+  transition: color 0.3s ease;
+}
+
+.top li:last-child {
+  border: none;
 }
 
 .top li:hover {
@@ -164,11 +231,10 @@ footer {
   background: #141414;
   color: #aaa;
   font-size: 0.9rem;
+  margin-top: 2rem;
 }
 
-/* ======== MEDIA QUERIES ======== */
-
-/* Tablets medianos */
+/* ======== RESPONSIVE ======== */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -188,55 +254,8 @@ footer {
   .pelicula-destacada .info {
     width: 100%;
   }
-}
 
-/* Tablets pequeños */
-@media (max-width: 600px) {
   .buscador input {
-    width: 130px;
-  }
-
-  .grid-peliculas {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  }
-}
-
-/* Celulares pequeños */
-@media (max-width: 430px) {
-  .logo h1 {
-    font-size: 1.4rem;
-  }
-
-  nav ul li a {
-    font-size: 0.85rem;
-  }
-
-  .pelicula img {
-    height: 200px;
-  }
-
-  .top {
-    margin: 1rem;
-    padding: 1.2rem;
-  }
-}
-
-/* Teléfonos muy pequeños */
-@media (max-width: 360px) {
-  .buscador input {
-    width: 110px;
-  }
-
-  .buscador .boton {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.8rem;
-  }
-
-  nav ul {
-    gap: 0.5rem;
-  }
-
-  .pelicula img {
-    height: 180px;
+    width: 150px;
   }
 }
