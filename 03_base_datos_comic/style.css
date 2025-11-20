@@ -194,36 +194,53 @@ nav a:hover {
 }
 
 /* ======== TOP 5 ======== */
-.top {
-  padding: 2rem;
-  background: #1a1a1a;
-  margin: 2rem;
-  border-radius: 10px;
+
+.galery {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+gap: 1rem;
+padding: 10px 0;
 }
 
-.top h2 {
-  margin-bottom: 1rem;
+
+/* Card → estilo tipo .pelicula */
+.card {
+background: #1a1a1a;
+border-radius: 10px;
+overflow: hidden;
+text-align: center;
+cursor: pointer;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+color: white;
+padding-bottom: 12px;
 }
 
-.top ol {
-  list-style: decimal inside;
-  color: #ccc;
+
+.card img {
+width: 50%;
+height: 300px;
+object-fit: cover;
+border-bottom: 1px solid #333;
 }
 
-.top li {
-  padding: 0.5rem 0;
-  border-bottom: 1px solid #333;
-  transition: color 0.3s ease;
+
+.card h3 {
+margin: 0.5rem 0;
+font-size: 1.1rem;
 }
 
-.top li:last-child {
-  border: none;
+
+.card p {
+color: #aaa;
+margin: 0 0 0.8rem;
+font-size: 0.9rem;
 }
 
-.top li:hover {
-  color: #ff3d3d;
-}
 
+.card:hover {
+transform: scale(1.05);
+box-shadow: 0 10px 30px rgba(212, 26, 26, 0.871);
+}
 /* ======== FOOTER ======== */
 footer {
   text-align: center;

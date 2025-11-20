@@ -33,23 +33,19 @@ let comic = {
   "personajes": [
     {
       "Nombre": "Isabel_Shakira",
-      "Descripcion": "shakira2,jpg",
-      "Imagen": "i"
+      "Descripcion": "",
+      "Imagen": "./img/shaki.jpg"
     },
     {
       "Nombre": "Lobo",
       "Descripcion": "",
-      "Imagen": "./img/perfil.jpg"
+      "Imagen": "./img/lobo.webp"
     },
     {
       "Nombre": "Oscuridad_dragón",
       "Descripcion": "",
-      "Imagen": "./img/perfil.jpg"
+      "Imagen": "./img/grag.jpg"
     },
-    {
-      "Nombre": "extras",
-      "Descripcion": "",
-      "Imagen": "./img/perfil.jpg"
-    }
+  
   ]
 }
