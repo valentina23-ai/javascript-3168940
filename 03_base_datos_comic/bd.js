@@ -12,38 +12,38 @@ let comic = {
       "nombre": "Capítulo 1",
       "personajes": ["Dan Jukes"],
       "portada": ["Radiation resistance", "Turning tiny", "Radiation blast"],
-      "descripcion": ""
+      "descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. "
     },
     {
       "id": 2,
       "nombre": "Capítulo 2",
       "personajes": ["Dan Jukes"],
       "portada": ["Radiation resistance", "Turning tiny", "Radiation blast"],
-      "descripcion": ""
+      "descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. "
     },
     {
       "id": 3,
       "nombre": "Capítulo 3",
       "personajes": ["Dan Jukes"],
       "portada": ["Radiation resistance", "Turning tiny", "Radiation blast"],
-      "descripcion": ""
+      "descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. "
     }
   ],
 
   "personajes": [
     {
       "Nombre": "Isabel_Shakira",
-      "Descripcion": "",
+      "Descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. ",
       "Imagen": "./img/shaki.jpg"
     },
     {
       "Nombre": "Lobo",
-      "Descripcion": "",
+      "Descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. ",
       "Imagen": "./img/lobo.webp"
     },
     {
       "Nombre": "Oscuridad_dragón",
-      "Descripcion": "",
+      "Descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. ",
       "Imagen": "./img/grag.jpg"
     },
   
