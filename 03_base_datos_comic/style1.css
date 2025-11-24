@@ -1,0 +1,175 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #0d0d0d;
+  color: #fff;
+  line-height: 1.5;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #141414;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+.logo h1 {
+  color: #ff3d3d;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ccc;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+.buscador {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.buscador input {
+  padding: 0.5rem;
+  border-radius: 6px;
+  background: #1f1f1f;
+  border: none;
+  color: #fff;
+}
+
+/* ======== VIDEO BANNER ======== */
+.video-banner {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.video-banner video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.5);
+}
+
+.video-banner .overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.video-banner h2 {
+  font-size: 2.2rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.video-banner p {
+  color: #ddd;
+  font-size: 1.1rem;
+}
+
+/* ======== CAPÍTULOS ======== */
+.capitulos {
+  padding: 2rem;
+}
+
+.capitulos h2 {
+  font-size: 1.7rem;
+  margin-bottom: 1.5rem;
+}
+
+.cap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.cap-card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.cap-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.cap-card h3 {
+  margin-top: 0.8rem;
+}
+
+.cap-card p {
+  margin: 0.5rem 0;
+  color: #aaa;
+}
+
+.cap-card .btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: #ff3d3d;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.cap-card .btn:hover {
+  background: #ff5c5c;
+  transform: scale(1.05);
+}
+
+.cap-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(255, 61, 61, 0.3);
+}
+
+/* ======== FOOTER ======== */
+footer {
+  margin-top: 2rem;
+  text-align: center;
+  padding: 1.2rem;
+  background: #141414;
+  color: #aaa;
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 768px) {
+  .video-banner {
+    height: 250px;
+  }
+}
