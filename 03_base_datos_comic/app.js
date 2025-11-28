@@ -16,4 +16,3 @@ section.innerHTML `
 Numeropersonajes.appendChild(div);
 
 });
-

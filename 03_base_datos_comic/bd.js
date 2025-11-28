@@ -1,4 +1,4 @@
-let comic = {
+export let comic = {
   "nombreComic" : "adadaada" ,
   "numeroCapitulos" : 3,
   "genero": "Fantasia y drama",
@@ -33,6 +33,7 @@ let comic = {
   ]
 
 
+  
   "personajes": [
     {
       "Nombre": "Isabel_Shakira",
