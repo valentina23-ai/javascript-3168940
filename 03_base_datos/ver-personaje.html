@@ -1,0 +1,13 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="UTF-8"><title>Personaje</title></head><body>
+<div id="data"></div>
+<a href="personajes.html">← Regresar</a>
+
+<script type="module">
+import {comic}from "./bd.js";
+const id=new URLSearchParams(location.search).get("id");
+const P=comic.personajes.find(p=>p.id==id);
+if(!P)location.href="home.html";
+data.innerHTML=`<h1>${P.nombre}</h1><img src="${P.img}" width="50%"><p>${P.bio}</p>`;
+</script>
+</body></html>

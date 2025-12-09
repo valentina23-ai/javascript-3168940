@@ -1,0 +1,13 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="UTF-8"><title>Capítulo</title></head><body>
+<div id="data"></div>
+<a href="capitulos.html">← Regresar</a>
+
+<script type="module">
+import {comic} from "./bd.js";
+const id=new URLSearchParams(location.search).get("id");
+const C=comic.capitulos.find(c=>c.id==id);
+if(!C)location.href="home.html";
+data.innerHTML=`<h1>${C.titulo}</h1><img src="${C.img}" width="50%"><p>${C.texto}</p>`;
+</script>
+</body></html>
